@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lawn Cut</title>
+<meta name="apple-mobile-web-app-title" content="Lawn Cut">
+<meta name="theme-color" content="#2f6b2a">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:16px;box-sizing:border-box;background:#f3f5ef;color:#1c2418;font-family:system-ui,-apple-system,sans-serif;text-align:center}
+img{width:120px;height:120px;border-radius:24px}
+h1{margin:0;font-size:32px}
+a{display:inline-block;background:#2f6b2a;color:#fff;text-decoration:none;font-weight:700;font-size:20px;padding:16px 28px;border-radius:12px}
+p{margin:0;color:#5f6b58;font-size:14px;max-width:320px}
+</style>
+</head>
+<body>
+<img src="apple-touch-icon.png" alt="Lawn Cut">
+<h1>Lawn Cut</h1>
+<a id="go" href="https://claude.ai/artifact/W1aQkzbVoNYmoewwh7Tjrc">Abrir app</a>
+<p>Para ponerla en la pantalla de inicio: iPhone → Compartir → "Agregar a inicio". Android → menú ⋮ → "Agregar a la pantalla principal".</p>
+<script>
+// Abre la app sola. Con ?instalar en el link se queda aquí para poder agregar el ícono,
+// y limpia el link para que el ícono abra la app directo.
+if (/instalar/.test(location.search)) { history.replaceState(null, '', location.pathname); }
+else { setTimeout(function(){ location.href = document.getElementById('go').href; }, 500); }
+</script>
+</body>
+</html>
